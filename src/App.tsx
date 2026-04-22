@@ -63,6 +63,15 @@ function App() {
     setTodos(todos.filter(todo => todo.id !== id));
   };
 
+  const handleEditTodo = (id: string, newText: string) => {
+    setTodos(todos.map(todo => {
+      if (todo.id === id) {
+        return { ...todo, text: newText.trim() };
+      }
+      return todo;
+    }));
+  };
+
   const getTodayString = () => {
     const today = new Date();
     const yyyy = today.getFullYear();
@@ -201,6 +210,7 @@ function App() {
                     todo={todo}
                     onToggle={handleToggleTodo}
                     onDelete={handleDeleteTodo}
+                    onEdit={handleEditTodo}
                   />
                 ))
               ) : (
