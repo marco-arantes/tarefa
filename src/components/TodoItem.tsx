@@ -46,6 +46,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
   const formatTimestamp = (timestamp?: number) => {
     if (!timestamp) return null;
     const date = new Date(timestamp);
+    console.log('oi')
     return date.toLocaleDateString('pt-BR');
   };
 
