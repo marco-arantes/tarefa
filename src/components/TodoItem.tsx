@@ -70,7 +70,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
             onChange={(e) => setEditText(e.target.value)}
             onBlur={handleEditSubmit}
             onKeyDown={handleKeyDown}
-            className="flex-1 text-sm md:text-base border outline-none border-indigo-300 rounded px-2 py-1 shadow-sm font-medium text-slate-700 bg-white"
+            className="flex-1 text-sm md:text-base border outline-none border-emerald-300 rounded px-2 py-1 shadow-sm font-medium text-slate-700 bg-white"
           />
         ) : (
           <span className={`text-sm md:text-base truncate transition-all duration-200 ${todo.completed ? 'text-slate-400 line-through' : 'text-slate-700'}`}>
@@ -96,7 +96,7 @@ export function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
         {!todo.completed && !isEditing ? (
           <button
             onClick={() => setIsEditing(true)}
-            className="shrink-0 p-2 text-slate-400 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition-colors"
+            className="shrink-0 p-2 text-slate-400 hover:text-emerald-600 hover:bg-emerald-50 rounded-md transition-colors"
             aria-label="Edit todo"
           >
             <Pencil size={18} />

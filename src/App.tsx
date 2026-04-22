@@ -104,12 +104,12 @@ function App() {
       <div className="max-w-2xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden border border-slate-100">
 
         {/* Header content */}
-        <div className="bg-indigo-600 px-8 py-10 text-white shadow-inner">
+        <div className="bg-emerald-600 px-8 py-10 text-white shadow-inner">
           <div className="flex items-center gap-3 mb-2">
             <ListTodo size={32} />
             <h1 className="text-3xl font-bold tracking-tight">Tarefas</h1>
           </div>
-          <p className="text-indigo-100 mt-2">Você tem {pendingCount} {pendingCount === 1 ? 'tarefa pendente' : 'tarefas pendentes'}</p>
+          <p className="text-emerald-100 mt-2">Você tem {pendingCount} {pendingCount === 1 ? 'tarefa pendente' : 'tarefas pendentes'}</p>
         </div>
 
         <div className="px-8 py-6">
@@ -122,12 +122,12 @@ function App() {
                   value={inputValue}
                   onChange={(e) => setInputValue(e.target.value)}
                   placeholder="Adicionar nova tarefa..."
-                  className="w-full pl-5 pr-14 py-4 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-indigo-500 focus:bg-white transition-all text-slate-700 placeholder:text-slate-400 text-lg shadow-sm group-hover:border-slate-300"
+                  className="w-full pl-5 pr-14 py-4 bg-slate-50 border-2 border-slate-200 rounded-xl focus:outline-none focus:border-emerald-500 focus:bg-white transition-all text-slate-700 placeholder:text-slate-400 text-lg shadow-sm group-hover:border-slate-300"
                 />
                 <button
                   type="submit"
                   disabled={!inputValue.trim()}
-                  className="absolute right-2 top-2 bottom-2 aspect-square bg-indigo-600 text-white rounded-lg flex items-center justify-center hover:bg-indigo-700 transition-colors disabled:opacity-50 disabled:bg-slate-300 disabled:hover:bg-slate-300 shadow-sm"
+                  className="absolute right-2 top-2 bottom-2 aspect-square bg-emerald-600 text-white rounded-lg flex items-center justify-center hover:bg-emerald-700 transition-colors disabled:opacity-50 disabled:bg-slate-300 disabled:hover:bg-slate-300 shadow-sm"
                   aria-label="Add todo"
                 >
                   <PlusCircle size={24} />
@@ -140,7 +140,7 @@ function App() {
                   type="date"
                   value={targetDate}
                   onChange={(e) => setTargetDate(e.target.value)}
-                  className="bg-slate-50 border border-slate-200 rounded-md focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 focus:outline-none px-2 py-1 text-slate-600"
+                  className="bg-slate-50 border border-slate-200 rounded-md focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 focus:outline-none px-2 py-1 text-slate-600"
                 />
               </div>
             </div>
@@ -154,7 +154,7 @@ function App() {
                   key={f}
                   onClick={() => setFilter(f)}
                   className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-all ${filter === f
-                    ? 'bg-white text-indigo-600 shadow-sm'
+                    ? 'bg-white text-emerald-600 shadow-sm'
                     : 'text-slate-500 hover:text-slate-700 hover:bg-slate-200/50'
                     }`}
                 >
@@ -173,7 +173,7 @@ function App() {
                     key={pf}
                     onClick={() => setPendingFilter(pf)}
                     className={`flex-1 py-1.5 px-3 rounded-md text-xs font-medium transition-all border ${pendingFilter === pf
-                        ? 'bg-white text-indigo-600 border-slate-200 shadow-sm'
+                        ? 'bg-white text-emerald-600 border-slate-200 shadow-sm'
                         : 'border-transparent text-slate-500 hover:text-slate-700 hover:bg-slate-100/50'
                       }`}
                   >
