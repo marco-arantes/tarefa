@@ -1,5 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
-import { Check, Trash2, Calendar, Clock, Pencil } from 'lucide-react';
+import { Check, Trash2, Pencil } from 'lucide-react';
 import type { Todo } from '../types';
 
 interface TodoItemProps {
